@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="card col-md-3" style="width: 18rem;" *ngFor="let item of post">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{item.title}}</h5>
+            <p class="card-text">{{item.body}}</p>
+            <a href="#" [routerLink]="['/website/detalle',item.id]" class="btn btn-primary">Ver Noticia</a>
+            </div>
+        </div>
+    </div>
+</div>

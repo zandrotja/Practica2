@@ -1,0 +1,22 @@
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-primary" (click)="registrar()">Registrar nuevo Post</button>
+        </div>
+
+    </div>
+    <br>
+    <div class="row">
+        <div class="card col-md-3" style="width: 18rem;" *ngFor="let item of post">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{item.title}}</h5>
+            <p class="card-text">{{item.body}}</p>
+            <a href="#" [routerLink]="['/website/detalle',item.id]" class="btn btn-primary">Ver Noticia</a>
+            <a href="#" [routerLink]="['/website/detalle',item.id]" class="btn btn-warning">Editar</a>
+            <a href="#" [routerLink]="['/website/detalle',item.id]" class="btn btn-danger">Eliminar</a>
+            </div>
+        </div>
+    </div>
+</div>
